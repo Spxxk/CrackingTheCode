@@ -97,11 +97,6 @@
 # ●	Devise a “handshake” method
 # ●	Diffie-Hellman
 # ○	g and n is public values
-# ○ Meet and decide on a key
-# ○ Generate new keys from our existing key
-# ○ Devise a “handshake” method
-# ○ Diffie-Hellman
-# ○ (base) and n (modulus) are public values
 # ○ Each party chooses a private number. Let's denote these as a (Alice's private number) and b (Bob's private number)
 # ○ They then calculate public values using g, n and their respective private number and exchange these public values. For example, Alice calculates A = g^a mod n and Bob calculates B = g^b mod n.
 # ○ After the public values have been exchanged, each party can calculate the shared secret key by raising the received value to the power of their own private number and taking the modulus n. In mathematical terms, the shared secret (key) K is calculated by Alice as K = B^a mod n and by Bob as K = A^b mod n.
