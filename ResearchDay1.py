@@ -106,6 +106,6 @@
 # ○ They then calculate public values using g, n and their respective private number and exchange these public values. For example, Alice calculates A = g^a mod n and Bob calculates B = g^b mod n.
 # ○ After the public values have been exchanged, each party can calculate the shared secret key by raising the received value to the power of their own private number and taking the modulus n. In mathematical terms, the shared secret (key) K is calculated by Alice as K = B^a mod n and by Bob as K = A^b mod n.
 
-# ○Remember, due to the properties of modular arithmetic, both Alice and Bob end up with the same value for K, despite going about it in slightly different ways. This shared secret can now be used as a key in symmetric cryptography.
+# ○ Remember, due to the properties of modular arithmetic, both Alice and Bob end up with the same value for K, despite going about it in slightly different ways. This shared secret can now be used as a key in symmetric cryptography.
 
-# ○For the Diffie-Hellman method to be secure, it is important that the private numbers a and b are kept secret. The values g, n, A, and B can be sent over an insecure network without compromising the security of the shared secret key.
+# ○ For the Diffie-Hellman method to be secure, it is important that the private numbers a and b are kept secret. The values g, n, A, and B can be sent over an insecure network without compromising the security of the shared secret key.
