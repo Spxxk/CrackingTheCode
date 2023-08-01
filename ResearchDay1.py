@@ -104,3 +104,19 @@
 # ○ Remember, due to the properties of modular arithmetic, both Alice and Bob end up with the same value for K, despite going about it in slightly different ways. This shared secret can now be used as a key in symmetric cryptography.
 
 # ○ For the Diffie-Hellman method to be secure, it is important that the private numbers a and b are kept secret. The values g, n, A, and B can be sent over an insecure network without compromising the security of the shared secret key.
+
+# Symmetrical Encryption
+# ●	Both share the same key to encrypt and decrypt 
+#    Alice                    Bob
+# ●	c = Enck(m) —> m = Deck(m)
+
+# DH (Diffie-Hellman)
+# Alice                                      Bob
+# ●	skA                                      skB 
+# ●	g, n (random public values)
+# ●	pkA = gskA mod n                   pkB = gskB mod n
+#                      —>           ←–
+# ●	K = pkBskA mod n                   K = pkAskB mod n    
+# ●	=(gskB)skA mod n                   =(gskA)skB mod n
+# ●	=gskB skA mod n                    =gskA skB mod n
+
