@@ -135,6 +135,117 @@ To sign a message:
 1) Choose k, 0 < k < q using a Pseudo-Random-Number Generator (PRNG)
 2) Calculate r = (g^k mod p) mod q
 3) Solve for s in the equation h(m) = xr + ks mod q (where x is your secret key). This is known
+# 	Sadly, it doesn’t work for subtraction or division
+# 	Not a fully homomorphic encryption scheme
+# 	Homomorphic encryption schemes allow arithmetic operations to be performed on encrypted data without the need to decrypt it.
+# 	Its application can be found in cloud computing, secure voting systems, secure mobile services, etc.
+# 	Elgamal is an example of a partially homomorphic encryption scheme because it allows multiplication operations on ciphertext.
+# 	Paillier Cryptosystem is a fully homomorphic encryption scheme that supports both addition and multiplication.
+
+Verifying
+To verify a message:
+1) Continue if 0 < r < q and 0 < s < q
+2) Calculate u = h(m)s-1 mod q
+3) Calculate v = -rs-1 mod q
+4) Calculate w == (g^uy^v mod p) mod q
+E) Y is the public key
+E) Check if w = r
+
+p = 3491, q = 349, g = 12
+h(m) = 2m mod 349
+m = 2024
+
+
+Sender
+To send a message:
+1) Generate key (sk, pk)
+0 < sk < q → 217 (sk)
+pk = gsk mod p → 12217 mod 3491
+sk = 217
+pk = 2003
+
+2) Generate a value k → 0 < k < q
+k = 122
+
+3)  Calculate r = (gk mod p) mod q
+= (12122 mod 3491) mod 349
+= 1024 mod 349
+= 326
+
+
+
+Bonus:
+g → 1 < g 
+g(-GF(p))
+ord(g) = q
+ord(g) = 12
+
+
+
+Certificate authority (CA)
+We need a trusted third party to verify identities
+CAs authenticate public keys
+
+
+
+Fully homomorphic encryption
+Can we get a computer to operate on data without knowing anything about it?
+Let’s define an encryption scheme
+Enck(m) = km
+Deck(c) = logk(c)
+Let’s pick k = 3 and n = 128
+Scenario
+Recall: we wanted to find 8 + 13 using our server
+Enc3(8) = 38 = 6561
+Enc3(13) = 313 = 1594323
+Ask machine to multiply 6561 and 1594323
+Responds with 10460353203
+Dec3(10460353203) = log3(104603532023) = 21
+What’s going on here?
+Enck(a) = ka
+Enck(b) = kb
+Enck(a + b) = ka+b = ka x kb = Enck(a) + Enck(b)
+
+4) Calculate s 
+Solve for s: h(m) = xr + ks mod q
+s = [(h(m) - xr) x k-1 mod q] mod q
+s = [209 - 70742) x 226] mod 349
+s = 117
+
+5)
+Sigsk(2024) = (r, s) = (326, 117)
+
+Receiver
+To revieve a message:
+1) Check 0 < r < q and o < s < q
+q = 349
+
+2) Calculate u = [h(m)[s-1 mod q]] mod q
+u = [209[117-1 mod 349]] mod 349
+u = 36784 mod 349
+u = 139
+
+3) Calculate v = -rs-1 mod q
+v = [(-r mod q)(s-1 mod q)] mod q
+v = [(-326 mod 349)(117-1 mod 349)] mod 349
+v = (23)(176) mod 349
+v = 209
+
+4) Calculate w = (guyv mod p) mod q
+w = (121392003209 mod 3491) mod 349
+w = (12139 mod 3491)(2003209 mod 3491) mod 349
+w = [(1370)(67) mod 3491] mod 349
+w = (91790 mod 3491) mod 349
+= 1024 mod 349
+= 326
+
+5) Verify if w = r
+w = 326
+r = 326
+w = r
+
+
+
 
 
 
