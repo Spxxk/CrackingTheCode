@@ -1,0 +1,50 @@
+Cross-site scripting
+●	Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. 
+●	XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user.
+●	https://www.vice.com/en/article/wnjwb4/the-myspace-worm-that-changed-the-internet-forever
+
+
+
+SQL injection
+●	Commands in SQL: 
+○	SELECT
+■	Example
+■	SELECT  username, salt
+■	FROM  users
+■	WHERE  salt < 500
+●	alice, 123
+●	bob, 456
+○	UPDATE
+■	Example
+●	UPDATE  users
+●	SET
+●	      username = “hello”
+●	WHERE username = “alice”
+○	DELETE
+■	Example
+●	DELETE
+●	FROM  users
+●	WHERE  username = “alice”
+○	- - (COMMENTING in SQL) 
+
+
+
+LLMs (Large Language Model)
+●	Large language models, or LLMs, are a type of AI that can mimic human intelligence. They use statistical models to analyze vast amounts of data, learning the patterns and connections between words and phrases.
+●	Humans use language on a way that is grounded in our experience of the world
+●	LLMs just try to statistically approximate human patterns
+●	They are not trustworthy. LLMs can hallucinate outputs that look plausible. They aren’t search engines
+○	https://www.theguardian.com/technology/2023/jun/23/two-us-lawyers-fined-submitting-fake-court-citations-chatgpt
+●	Aside from norma; hacking goals, anything that
+○	Harms the user
+○	Extracts information was meant to be hidden
+○	Otherwise causes the system to behave in unintended ways
+●	Prompt Injection
+○	LLMs just take in text and generate new text, how do we make them do more useful things?
+○	VIA prompts
+○	Prompt injection means sending text or make it ignore previous instructions or perform unintended actions
+●	Research have found that they can predict text scraped to build LLMs, and add false information into it:
+○	Buying expired websites
+○	Editing wikipedia
+●	Computer security is about any way systems can be undermined or users can be harmed
+

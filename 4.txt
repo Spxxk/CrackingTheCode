@@ -1,0 +1,33 @@
+●	Edward Snowden
+
+●	Tracking on the Internet
+○	IP addresses
+■	ipconfig/ifconfig
+■	Routing/Routers
+●	Receives and sends data on computer networks
+■	Public IP Address
+●	Assigned to your network by your internet service provider (ISP) and is used to provide access over the internet
+■	Private IP Address
+●	Assigned to your device directly by your network route
+■	Packets
+●	A basic unit of data that's grouped together and transferred over a computer network
+○	VPNs
+■	Virtual Private Networks
+■	Private Internet Access
+■	ProtonVPN
+○	TOR
+
+
+
+●	Passwords
+○	Selecting secure passwords
+■	How long should my passwords be?
+■	What characters should I use?
+■	Should the characters be random?
+○	Password managers
+○	Plaintext Passwords
+○	Hashed passwords
+■	BCYPRT
+
+●	Cache
+○ Basically a place where you can store stuff and it runs fast
